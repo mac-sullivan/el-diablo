@@ -1,13 +1,13 @@
-backend:
-  name: git-gateway
-  branch: main
-media_folder: "static/images/uploads" # Where images are stored in repo
-public_folder: "/images/uploads" # URL path for images
-collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog" # Folder for blog posts
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+# backend:
+#   name: git-gateway
+#   branch: main
+# media_folder: "static/images/uploads" # Where images are stored in repo
+# public_folder: "/images/uploads" # URL path for images
+# collections:
+#   - name: "blog"
+#     label: "Blog"
+#     folder: "content/blog" # Folder for blog posts
+#     create: true
+#     fields:
+#       - { label: "Title", name: "title", widget: "string" }
+#       - { label: "Body", name: "body", widget: "markdown" }
