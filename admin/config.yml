@@ -2,7 +2,7 @@ backend:
   name: github
   repo: mac-sullivan/el-diablo
   branch: main
-  base_url: https://your-site.netlify.app # Needed for OAuth
+  base_url: https://jazzy-cat-bff998.netlify.app/ # Needed for OAuth
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
