@@ -1,9 +1,11 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: mac-sullivan/el-diablo
   branch: main
+  base_url: https://your-site.netlify.app # Needed for OAuth
 
-media_folder: "images/uploads" # where uploaded files go
-public_folder: "/images/uploads"
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "pages"
@@ -11,7 +13,7 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "index.html"
+        file: "content/index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
