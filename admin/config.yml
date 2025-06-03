@@ -2,8 +2,6 @@ backend:
   name: github
   repo: mac-sullivan/el-diablo
   branch: main
-  auth_scope: repo
-  base_url: https://jazzy-cat-bff998.netlify.app
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
