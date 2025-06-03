@@ -7,19 +7,6 @@
   <body>
     <div id="nc-root"></div>
 
-    <!-- ✅ Load CMS script and wait until it's ready before calling CMS.init() -->
-    <script>
-      const script = document.createElement("script");
-      script.src = "https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js";
-      script.onload = function () {
-        // Decap CMS is now available and safe to use
-        if (typeof CMS !== "undefined") {
-          CMS.init();
-        } else {
-          console.error("CMS failed to load.");
-        }
-      };
-      document.body.appendChild(script);
-    </script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
 </html>
