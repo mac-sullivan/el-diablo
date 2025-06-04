@@ -1,9 +1,0 @@
----
-import { getEntry } from 'astro:content';
-import { Markdown } from 'astro/components';
-
-const page = await getEntry('pages', 'home');
----
-
-<h1>{page.data.title}</h1>
-<Markdown content={page.data.body} />
