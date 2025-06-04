@@ -9,6 +9,7 @@ const pages = await getCollection('pages');
     <title>My Site</title>
   </head>
   <body>
+  <h1>test</h1>
     {pages.map(page => (
       <div>
         <h1>{page.data.title}</h1>
