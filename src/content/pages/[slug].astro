@@ -1,0 +1,32 @@
+---
+
+import { getCollection } from 'astro:content';
+import { AstroError } from 'astro/errors';
+import { marked } from 'marked';
+const html = marked.parse(page.data.body);
+
+const { slug } = Astro.params;
+const pages = await getCollection('pages');
+const page = pages.find((p) => p.slug === slug);
+
+if (!page) {
+  throw new AstroError({
+    name: 'Not Found',
+    message: `Page with slug "${slug}" not found.`,
+  });
+}
+
+const bodyHtml = marked.parse(page.data.body || '');
+---
+
+<html lang="en">
+  <head>
+    <title>{page.data.title}</title>
+  </head>
+  <body>
+    <h1>{page.data.title}</h1>
+    <div class="prose">
+      {@html bodyHtml}
+    </div>
+  </body>
+</html>
