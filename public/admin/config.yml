@@ -19,9 +19,6 @@ site_url: https://jazzy-cat-bff998.netlify.app
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
-media_library:
-  name: default
-
 collections:
   - name: "pages"
     label: "Pages"
