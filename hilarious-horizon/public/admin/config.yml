@@ -1,0 +1,13 @@
+backend:
+  name: proxy
+  proxy_url: http://localhost:8080/api/v1
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "src/content/pages"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
